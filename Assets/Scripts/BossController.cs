@@ -5,10 +5,10 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     [SerializeField] private GameObject ToxicArea, prefabBullet;
-    [SerializeField] private PlayerController Player;
+    public PlayerController Player;
     [SerializeField] private Transform bulletSpawnPoint;
 
-    public float currentHealth;
+    public float currentHealth, speed = 0.001f;
     private float maxHealth = 200;
     
     State currentState;
@@ -68,7 +68,6 @@ public class BossController : MonoBehaviour
     public void Spit()
     {
         GameObject go = Instantiate(prefabBullet, bulletSpawnPoint.position, Quaternion.identity);
-        //go.transform.SetParent();
         Bullet bullet = go.GetComponent<Bullet>();
         bullet.daño = 1;
         bullet.velocidad = 10;

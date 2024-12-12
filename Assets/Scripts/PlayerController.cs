@@ -28,10 +28,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float inputAxis = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(inputAxis * Time.deltaTime * speed,
-                                          0, 0);
+        transform.position += new Vector3(inputAxis * Time.deltaTime * speed, 0, 0);
 
-        spriteRenderer.flipX = inputAxis == .0f? Standing() : Walking(inputAxis);
+        spriteRenderer.flipX = inputAxis == .0f ? Standing() : Walking(inputAxis);
 
         FloorDetection();
 

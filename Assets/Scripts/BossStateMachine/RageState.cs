@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class RageState : State
@@ -8,6 +9,12 @@ public class RageState : State
     {
         base.Entry();
         Debug.Log("Rage State Entered");
+        Boss.StartCoroutine(EnterBurp());
+    }
+
+    private IEnumerator EnterBurp()
+    {
+        yield return new WaitForSeconds(2f);
         Boss.ChangeStateKey(States.Burp);
     }
 }

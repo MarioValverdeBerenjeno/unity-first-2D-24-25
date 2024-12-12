@@ -11967,6 +11967,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6940886598619839701, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: duracion
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_Color.a
       value: 0.7019608

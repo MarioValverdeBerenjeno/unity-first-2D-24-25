@@ -15,8 +15,10 @@ public class ToxicArea : MonoBehaviour
     {
         PlayerController playerInAera = collision.gameObject.GetComponent<PlayerController>();
         if (playerInAera != null && playerInAera == player)
+        {
             playerInAera.health -= daño / 60;
-        Debug.Log("Burp damage: " + playerInAera.health);
+            Debug.Log("Burp damage: " + playerInAera.health);
+        }
     }
 
     private IEnumerator Desactivar()
