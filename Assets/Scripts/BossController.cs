@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField] private GameObject ToxicArea;
+    [SerializeField] private GameObject ToxicArea, prefabBullet;
     [SerializeField] private PlayerController Player;
+    [SerializeField] private Transform bulletSpawnPoint;
 
     public float currentHealth;
     private float maxHealth = 200;
@@ -62,7 +63,22 @@ public class BossController : MonoBehaviour
         currentState.Exit();
         currentState = newState;
         currentState.Entry();
-    }    
+    }
+
+    public void Spit()
+    {
+        GameObject go = Instantiate(prefabBullet, bulletSpawnPoint.position, Quaternion.identity);
+        //go.transform.SetParent();
+        Bullet bullet = go.GetComponent<Bullet>();
+        bullet.daño = 1;
+        bullet.velocidad = 10;
+    }
+
+    public void Burp()
+    {
+        ToxicArea.SetActive(true);
+        ToxicArea.GetComponent<ToxicArea>().player = Player;
+    }
 }
 
 public enum States

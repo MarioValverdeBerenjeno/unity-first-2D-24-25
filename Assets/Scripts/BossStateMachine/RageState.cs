@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RageState : State
@@ -10,5 +8,6 @@ public class RageState : State
     {
         base.Entry();
         Debug.Log("Rage State Entered");
+        Boss.ChangeStateKey(States.Burp);
     }
 }

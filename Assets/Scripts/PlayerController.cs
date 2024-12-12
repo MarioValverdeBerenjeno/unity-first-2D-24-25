@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 2.0f;
     [SerializeField] private float jumpForce = 5.0f;
     [SerializeField] private Transform rayCastPosition;
+    public float health = 10;
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBody2D;

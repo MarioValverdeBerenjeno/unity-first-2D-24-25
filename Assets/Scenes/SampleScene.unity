@@ -4630,8 +4630,8 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &226466826
 CapsuleCollider2D:
@@ -4683,6 +4683,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   rayCastPosition: {fileID: 644395691}
+  health: 10
 --- !u!95 &226466828
 Animator:
   serializedVersion: 5
@@ -11942,13 +11943,53 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 226466827}
-    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
-      propertyPath: ToxicArea
-      value: 
-      objectReference: {fileID: 248195346127487389}
+    - target: {fileID: 3928934747740806860, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4227307048293196948, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_Name
       value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327783389570705571, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657765927762208478, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657765927762208478, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915340149982054182, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.22177258
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18467425
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614216597968693713, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8636563346488724124, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11995,11 +12036,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
---- !u!1 &248195346127487389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3928934747740806860, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
-  m_PrefabInstance: {fileID: 248195346127487388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

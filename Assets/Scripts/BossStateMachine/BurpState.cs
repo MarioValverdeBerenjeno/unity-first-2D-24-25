@@ -10,6 +10,7 @@ public class BurpState : State
     {
         base.Entry();
         Debug.Log("Burp State Entered");
+        Boss.Burp();
         // activar animación follow
     }
 
